@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+
+.header {
+  margin-bottom: 30px;
+  padding: 50px 0px 50px 0px;
+  background-color: #5b9cd6;
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-self: center;
+}
+
+.header__title {
+  align-self: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.header__contact-list {
+  place-self: center;
+}
+
+.contact-item__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.contact-item__link {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* about */
+
+.about {
+  margin-bottom: 30px;
+}
+
+.about__title {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8eb;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+.about__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* skills */
+
+.skills {
+  margin-bottom: 30px;
+}
+
+.skills__title {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8eb;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+.skills__list--wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.skills__list-item {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+.footer {
+  background-color: #5b9cd6;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__text {
+  padding: 30px 0 30px 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+}
