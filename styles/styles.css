@@ -1,58 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-article > * + * {
-  margin-top: 1em;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
+:root {
+  --gap: 1rem;
+  --font-family: "Open Sans", sans-serif;
+  --bg-color: #5b9cd6;
+  --font-color: #ffffff;
 }
 
 .wrapper {
@@ -86,7 +38,7 @@ select {
 .header {
   margin-bottom: 30px;
   padding: 50px 0px 50px 0px;
-  background-color: #5b9cd6;
+  background-color: var(--bg-color);
 }
 
 .header__container {
@@ -95,12 +47,20 @@ select {
   place-self: center;
 }
 
+@media (max-width: 575px) {
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 .header__title {
   align-self: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 36px;
-  color: #ffffff;
+  color: var(--font-color);
   text-transform: capitalize;
 }
 
@@ -109,19 +69,19 @@ select {
 }
 
 .contact-item__text {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 18px;
-  color: #ffffff;
+  color: var(--font-color);
   text-transform: capitalize;
 }
 
 .contact-item__link {
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  color: #ffffff;
+  color: var(--font-color);
 }
 
 /* about */
@@ -132,16 +92,16 @@ select {
 
 .about__title {
   margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e8e8eb;
-  font-family: "Open Sans", sans-serif;
+  border-bottom: 1px solid var(--bg-color);
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 36px;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .about__text {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
 }
@@ -154,12 +114,12 @@ select {
 
 .skills__title {
   margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e8e8eb;
-  font-family: "Open Sans", sans-serif;
+  border-bottom: 1px solid var(--bg-color);
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 36px;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .skills__list--wrapper {
@@ -167,18 +127,19 @@ select {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   margin-bottom: 30px;
+  padding: 0px 10px 0px 30px;
 }
 
 .skills__list-item {
-  font-family: "Open Sans", sans-serif;
+  margin-bottom: 10px;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
-  margin-bottom: 10px;
   list-style: disc;
 }
 
 .footer {
-  background-color: #5b9cd6;
+  background-color: var(--bg-color);
 }
 
 .footer__container {
@@ -188,8 +149,12 @@ select {
 
 .footer__text {
   padding: 30px 0 30px 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
-  color: #ffffff;
+  color: var(--font-color);
+}
+
+.hidden {
+  display: none;
 }
